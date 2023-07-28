@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const mentorRoute = require('./routes/mentor');
+const replyEmail  = require('./controllers/replyEmail');
+app.use('/replyEmail', replyEmail);
 app.use('/mentor', mentorRoute);
 app.use(cors())
 app.use(express.json());
